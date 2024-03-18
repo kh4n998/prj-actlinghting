@@ -1,0 +1,54 @@
+<header class="bg-white sticky top-0">
+  <nav class="flex items-center p-4 lg:mx-auto lg:container">
+    <a href="#" class="-m-1.5 p-1.5 mr-auto">
+      <span class="sr-only">Your Company</span>
+      <img class="h-8 w-auto" src="./assets/logo/LOGO.png" alt="">
+    </a>
+    <div class="flex lg:hidden">
+      <button (click)="sidebarVisible = !sidebarVisible" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Open main menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    <ul class="hidden lg:flex lg:gap-x-12">
+      <li>
+        <a routerLink="/trang-chu" routerLinkActive="text-primary after:w-full"
+        class="relative hover:text-primary font-medium after:absolute after:left-0 after:-bottom-2 after:w-0 after:border-b-2 after:border-primary hover:after:w-full after:transition-all">Trang chủ</a>
+      </li>
+      <li>
+        <a routerLink="/gioi-thieu" routerLinkActive="text-primary after:w-full"
+        class="relative hover:text-primary font-medium after:absolute after:left-0 after:-bottom-2 after:w-0 after:border-b-2 after:border-primary hover:after:w-full after:transition-all">Giới thiệu</a>
+      </li>
+      <li>
+        <a routerLink="/san-pham" routerLinkActive="text-primary after:w-full"
+        class="relative hover:text-primary font-medium after:absolute after:left-0 after:-bottom-2 after:w-0 after:border-b-2 after:border-primary hover:after:w-full after:transition-all">Sản phẩm</a>
+      </li>
+      <li>
+        <a routerLink="/du-an" routerLinkActive="text-primary after:w-full"
+        class="relative hover:text-primary font-medium after:absolute after:left-0 after:-bottom-2 after:w-0 after:border-b-2 after:border-primary hover:after:w-full after:transition-all">Dự án</a>
+      </li>
+      <li>
+        <a routerLink="/lien-he" routerLinkActive="text-primary after:w-full"
+        class="relative hover:text-primary font-medium after:absolute after:left-0 after:-bottom-2 after:w-0 after:border-b-2 after:border-primary hover:after:w-full after:transition-all">Liên hệ</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<p-sidebar [(visible)]="sidebarVisible">
+  <h3>Sidebar</h3>
+  <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+</p-sidebar>
+
+<!-- <p-overlayPanel #product>
+  <ul>
+    <li>
+      <a routerLink="/lien-he" routerLinkActive="text-primary after:border-primary"
+        class="relative hover:text-primary after:absolute after:left-0 after:-bottom-2 after:w-0 after:border-b-2 after:border-primary hover:after:w-full after:transition-all">Liên hệ</a>
+    </li>
+  </ul>
+</p-overlayPanel> -->
