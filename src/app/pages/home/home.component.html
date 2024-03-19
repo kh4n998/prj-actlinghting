@@ -1,0 +1,78 @@
+<div class="mb-20">
+  <img src="./assets/banner/hero_banner.jpg" alt="hero banner" loading="eager" class="w-full" srcset="">
+</div>
+<div class="container mx-auto">
+  <div class="mb-20 mx-auto text-center max-w-3xl">
+    <div class="uppercase text-3xl font-bold mb-3">ACT LIGHTING</div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus dicta cum aliquam porro distinctio hic rem provident non quod delectus sint nulla vero similique, recusandae odit! Quibusdam, cupiditate? Voluptates quo perferendis, repellendus reprehenderit inventore eos est molestiae. Natus consectetur temporibus vero vel similique deserunt nemo id laudantium. In, nihil aspernatur.</p>
+  </div>
+
+  @defer (on viewport) {
+    <div class="mb-20">
+      <h4 class="font-bold mb-8 text-center">
+        SẢN PHẨM BÁN CHẠY
+      </h4>
+      <p-tabView>
+        @for (collection of listTabViewProducts; track $index) {
+          <p-tabPanel [header]="collection.header" styleClass="flex">
+              <ng-template pTemplate="content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+                  @for (item of collection.items; track $index) {
+                    <a class="text-center cursor-pointer" [routerLink]="item.slug">
+                      <div class="aspect-square overflow-hidden">
+                        <img [src]="item.img" [alt]="item.name" loading="lazy" class="hover:scale-125 transition-all duration-700"/>
+                      </div>
+                      <h6 class="font-medium text-center text-body mt-2">{{item.name}}</h6>
+                    </a>
+                  }
+                </div>
+              </ng-template>
+          </p-tabPanel>
+        }
+      </p-tabView>
+    </div>
+  }
+  @placeholder {
+    <h4 class="font-bold mb-8 text-center">
+      SẢN PHẨM BÁN CHẠY
+    </h4>
+  }
+
+  <!-- <div class="mb-20">
+    <h4 class="font-bold mb-8 text-center">
+      Hình ảnh thực tế
+    </h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+      <div class="aspect-square overflow-hidden">
+        <p-image [src]=""></p-image>
+      </div>
+    </div>
+  </div> -->
+
+  @defer (on viewport) {
+    <div class=" mb-20">
+      <h4 class="font-bold mb-8 text-center">
+        SẢN PHẨM NỔI BẬT
+      </h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+        @for (item of listProducts; track $index) {
+          <a class="text-center cursor-pointer" [routerLink]="item.slug">
+            <div class="aspect-square overflow-hidden">
+              <img [src]="item.img" [alt]="item.name" loading="lazy" class="hover:scale-125 transition-all duration-700"/>
+            </div>
+            <h6 class="font-medium text-center text-body mt-2">{{item.name}}</h6>
+          </a>
+        }
+      </div>
+      <div class="text-center mt-8">
+        <a routerLink="san-pham">Xem thêm</a>
+      </div>
+    </div>
+  }
+  @placeholder {
+    <h4 class="font-bold mb-8 text-center">
+      SẢN PHẨM NỔI BẬT
+    </h4>
+  }
+
+</div>
